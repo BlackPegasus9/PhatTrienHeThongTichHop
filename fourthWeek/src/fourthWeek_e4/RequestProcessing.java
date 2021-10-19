@@ -64,14 +64,12 @@ public class RequestProcessing extends Thread{
         	}   
 	    } catch (IOException e) {
 	    	e.printStackTrace();
-	    	 return;
 	    }finally{    
 	    try{
 	        System.out.println("Connection Closing..");
 	        if (s!=null){
 	        s.close();
 	        System.out.println("Socket Closed");
-	        return;
 	        }
 	       }
 	    catch(IOException ie){
