@@ -34,21 +34,16 @@ public static void main(String args[]) throws IOException{
 		os = s.getOutputStream();
 		dis = new DataInputStream(is);
 		dos = new DataOutputStream(os);	
-    }
-    catch (IOException e){
-        e.printStackTrace();
-        System.err.print("IO Exception");
-    }
-
-    try{
-    	sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
     	System.out.println("Input your choice:");
     	i = sc.nextLine();
     	dos.writeUTF(i);
 		String message_from_sv = dis.readUTF();
 		System.out.println(message_from_sv);
     }
-    catch(IOException e){
+    catch (IOException e){
+        e.printStackTrace();
+        System.err.print("IO Exception");
     }
     finally{
         s.close();
